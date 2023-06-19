@@ -1,0 +1,50 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title color="primary">Componentes</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let c of componentes" [routerLink]="c.redirectTo" detail>
+      <ion-icon [name]="c.icon" slot="start" color="primary"></ion-icon>
+        {{c.name}}
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-avatar slot="start">
+      <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
+    <ion-label> Peter Aviles Alarcon </ion-label>
+  </ion-item>
+
+  <ion-toolbar>
+    <ion-button>
+      <ion-icon slot="icon-only" name="search"></ion-icon>
+      <ion-label>Buscar </ion-label>
+    </ion-button>
+    
+    <ion-buttons slot="start">
+      <ion-button>Iniciar sesion</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-content>
+</ion-content> -->
+
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="start">
+  <ion-menu-button menu="first" color="primary"></ion-menu-button>
+  </ion-buttons>
+  <ion-title color="primary">Componentes</ion-title>
+  </ion-toolbar>
+  </ion-header>
+  <ion-content>
+  <ion-list>
+  <ion-item *ngFor="let c of componentes | async"
+  [routerLink]="c.redirectTo" detail>
+  <ion-icon [name]="c.icon" slot="start" color="primary"></ion-icon>
+  {{c.name}}
+  </ion-item>
+  </ion-list>
+  </ion-content>
